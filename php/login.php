@@ -14,12 +14,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <!-- CSS LINK -->
-        <link rel="stylesheet" href="styles/menu.css">
-        <link rel="stylesheet" href="styles/header.css">
-        <link rel="stylesheet" href="styles/section.css">
-        <link rel="stylesheet" href="styles/biography.css">
-        <link rel="stylesheet" href="styles/footer.css">
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="../styles/menu.css">
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/section.css">
+        <link rel="stylesheet" href="../styles/biography.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/styles.css">
 
 
         <!-- FONT AWESOME -->
@@ -29,7 +29,7 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-        <title>Urbine01 Home</title>
+        <title>Login</title>
     </head>
 
     <body>
@@ -40,7 +40,7 @@
             <!-- Menu -->
             <div class="menu">
 
-                <a href="index.html"> <img src="images/logo.jpg" alt="logo" width="90px" height="60px"></a>
+                <a href="index.html"> <img src="../images/logo.jpg" alt="logo" width="90px" height="60px"></a>
                 
                 <h1 style="margin-right: 15px;">Login / Sign in</h1> 
                 
@@ -54,26 +54,10 @@
                 
                 <div class="contenedor">
                     <h1 id="h1-emprendimiento" >Emprendimiento Urbine</h1> 
-                    <div class="divisor header-2">
-                        <div class="contenedor-maq-de-escribir">
-                            <a href="php/login.html">
-                                <button >Iniciar Sesion</button>
-                                <br><br>
-                            </a>
-                            <a href="index.php">
-                                <button id="invited">Soy invitado</button>
-                            </a>
-                            
-                        </div>
-                        
-                        <div class="image-header">
-                            <img src="images/emprendimiento.jpg" alt="yo" width="300px" height="300px">
-                            
-                        </div>
-                    </div>
-
 
                 </div>
+
+                
                 
 
 
