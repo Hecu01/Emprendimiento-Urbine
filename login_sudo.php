@@ -14,12 +14,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <!-- CSS LINK -->
-        <link rel="stylesheet" href="../styles/menu.css">
-        <link rel="stylesheet" href="../styles/header.css">
-        <link rel="stylesheet" href="../styles/section.css">
-        <link rel="stylesheet" href="../styles/biography.css">
-        <link rel="stylesheet" href="../styles/footer.css">
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/section.css">
+        <link rel="stylesheet" href="styles/biography.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/styles.css">
 
         <link rel="stylesheet" href="styles/login.css">
 
@@ -42,7 +42,7 @@
             <!-- Menu -->
             <div class="menu">
 
-                <a href="index.html"> <img src="../images/logo.jpg" alt="logo" width="90px" height="60px"></a>
+                <a href="index.html"> <img src="images/logo.jpg" alt="logo" width="90px" height="60px"></a>
                 
                 <h1 style="margin-right: 15px;">Login / Sign in</h1> 
                 
@@ -63,7 +63,7 @@
         
                     
                             <div class="form">
-                                <form method="POST" action="validar.php">
+                                <form method="POST" action="php/validar.php">
         
                                     <h2>Login</h2>
                                     <label for="nombre-persona">Correo electrónico</label><br>
@@ -82,9 +82,9 @@
                                     </div>
 
                                     
-
+                                    
                                 </form>                                    
-                                <p class="p-no-registrado">¿No está registrado? registrese <a id="a-aqui" href="registro_super_usuario.html">aquí</a></p>
+                                <p class="p-no-registrado">¿No está registrado? registrese <a id="a-aqui" href="php/registro_super_usuario.html">aquí</a></p>
         
                                 
                             </div>
