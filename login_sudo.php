@@ -82,7 +82,6 @@
                                     </div>
 
                                     
-                                    
                                 </form>                                    
                                 <p class="p-no-registrado">¿No está registrado? registrese <a id="a-aqui" href="php/registro_super_usuario.html">aquí</a></p>
         

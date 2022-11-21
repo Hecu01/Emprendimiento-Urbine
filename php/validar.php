@@ -17,6 +17,9 @@
     # compraración de filas con las de la tabla
     $filas =  mysqli_num_rows($resultado);
 
+
+
+    
     # Validación... si es TRUE va al home.php, en caso de FALSE devuelve al login
     if($filas){
         ?> 
@@ -30,11 +33,7 @@
 
         ?> 
         <script>alert("No pudiste autenticarte");</script>
-        <?php
 
-            
-            header("location:../login_sudo.php");
-        ?>
         <?php 
 
     }

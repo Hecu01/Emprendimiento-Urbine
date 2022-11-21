@@ -42,6 +42,26 @@
 
                 <a href="index.html"> <img src="../images/logo.jpg" alt="logo" width="90px" height="60px"></a>
                 
+                
+                <?php 
+                    /* AL INICIAR SESION QUE DIGA AL LADO DE SUPER-USUARIO: <span> $ADMIN </span>
+                    include("../php/con_db.php");
+                    $getAdmin1 = "select * from administradores order by apellido ";
+                    $getAdmin2 = mysqli_query($conexion, $getAdmin1);
+                    while ($row =mysqli_fetch_array($getAdmin2))
+                    {
+                        $id_cliente = $row['id_cliente'];
+                        $nombre = $row['nombre'];
+                        $apellido = $row['apellido'];
+                        $direccion = $row['direccion'];
+                        $zona = $row['zona'];
+                        ?>
+                        <option value="<?php echo $id_cliente; ?>"> <?php echo $apellido." ".$nombre; ?></option>
+                        <?php
+                    }
+                    */
+                ?>
+                   
                 <h1 style="margin-right: 15px;">Super-Usuario: <span>Valentin</span></h1> 
                 
                 
@@ -66,39 +86,28 @@
                 </aside>
 
                     
-          
+                
                 <div class="formulario" id="agregar-cliente">
                     <form method="POST" >
 
                         <h2>Registrar Cliente</h2>
                         <div>
-
-                            <input type="text" name="name" placeholder="Nombre" id="nombre-persona"> <input type="checkbox" name="check" id="">
+                            <input type="text" name="name" placeholder="Nombre" id="nombre-persona"> 
                         </div>
-                
-
                         <div>
-
-                            <input type="text" name="surname" placeholder="Apellido" id="apellido-persona"> <input type="checkbox" name="check" id="">
+                            <input type="text" name="surname" placeholder="Apellido" id="apellido-persona"> 
                         </div>
-
                         <div>
-
-                            <input type="text" name="tel" id="tel" placeholder="Telefono" disabled>  <input type="checkbox" name="check" checked id="">
+                            <input type="text" name="direccion" id="direccion" placeholder="Direccion">  
                         </div>
-
                         <div>
-
-                            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad"> <input type="checkbox" name="check" id="">
-                        </div>
-                
+                            <input type="text" name="zona" id="zona" placeholder="Zona"> 
+                        </div>             
                         <br>    
                         <div class="contenedor-submit">
-                            
                             <input type="submit" value="Registrar" name="register-cliente" id="enviar" class="btn btn-primary">
 
                         </div>
-                        
                         <?php
                             include('registrar_cliente.php');
                         ?>
@@ -106,34 +115,133 @@
 
                     
                 </div>
-                  
+                
+                <div class="formulario" id="agregar-cliente">
+                    <form method="POST" >
+
+                        <h2>Registrar Encargue</h2>
+
+                        <select name="cliente" id="cliente" style="width:180px;">
+
+                            <option value="default" selected disabled hidden >Seleccione Cliente</option>
+
+                            <?php 
+                                include("../php/con_db.php");
+                                $getClientes1 = "select * from clientes order by apellido ";
+                                $getClientes2 = mysqli_query($conexion, $getClientes1);
+                                while ($row =mysqli_fetch_array($getClientes2))
+                                {
+                                    $id_cliente = $row['id_cliente'];
+                                    $nombre = $row['nombre'];
+                                    $apellido = $row['apellido'];
+                                    $direccion = $row['direccion'];
+                                    $zona = $row['zona'];
+                                    ?>
+                                    <option value="<?php echo $id_cliente; ?>"> <?php echo $apellido." ".$nombre; ?></option>
+                                    <?php
+                                }
+                            ?>
+
+                        </select>
+                        <select name="maceta" id="maceta" style="width:180px;">
+                            
+                            <option value="default" selected disabled hidden>Seleccione Maceta</option>
+
+                            <?php 
+                                include("../php/con_db.php");
+                                $getClientes1 = "select * from macetas order by id_maceta ";
+                                $getClientes2 = mysqli_query($conexion, $getClientes1);
+                                while ($row =mysqli_fetch_array($getClientes2))
+                                {
+                                    $id_maceta = $row['id_maceta'];
+                                    $maceta = $row['maceta'];
+                                    $precio = $row['precio'];
+
+                                    ?>
+                                    <option value="<?php echo $id_maceta; ?>"> <?php echo $maceta." $".$precio; ?></option>
+                                    <?php
+                                }
+                            ?>
+                        </select>
+
+                        <div class="d-flex" style="height: 40px;">
+                            <select name="" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button style="border:1px solid #000; height:auto; margin:5px 5px; ">Agregar</button>
+                        </div>
+
+
+                        <br>    
+                        <div class="contenedor-submit">
+                            <input type="submit" value="Registrar" name="register-cliente" id="enviar" class="btn btn-primary">
+
+                        </div>
+                        <?php
+                            include('registrar_cliente.php');
+                        ?>
+                    </form>
+
+                    
+                </div>
+                <!-- Registrar Cliente -->
                 <div class="formulario" id="agregar-cliente">
                     <form method="POST" >
 
                         <h2>Venta</h2>
-                        <select name="cliente" id="cliente">
-                            <option value="default" selected disabled hidden>Seleccione Cliente</option>
-                            <option value="1">Valentin Urbine</option>
-                            <option value="2">Celeste Sánchez</option>
-                            <option value="3">Patricia Perez</option>
-                            <option value="4">Mariana Ramos</option>
-                            <option value="5">Otro</option>
+
+                        <select name="cliente" id="cliente" style="width:180px;">
+
+                            <option value="default" selected disabled hidden >Seleccione Cliente</option>
+
+                            <?php 
+                                include("../php/con_db.php");
+                                $getClientes1 = "select * from clientes order by apellido ";
+                                $getClientes2 = mysqli_query($conexion, $getClientes1);
+                                while ($row =mysqli_fetch_array($getClientes2))
+                                {
+                                    $id_cliente = $row['id_cliente'];
+                                    $nombre = $row['nombre'];
+                                    $apellido = $row['apellido'];
+                                    $direccion = $row['direccion'];
+                                    $zona = $row['zona'];
+                                    ?>
+                                    <option value="<?php echo $id_cliente; ?>"> <?php echo $apellido." ".$nombre; ?></option>
+                                    <?php
+                                }
+                            ?>
+                   
+    
+
+                            
                         </select>
 
-                        <select name="maceta" id="maceta">
+                        <select name="maceta" id="maceta" style="width:180px;">
                             
                             <option value="default" selected disabled hidden>Seleccione Maceta</option>
-                            <option value="1">Cónica</option>
-                            <option value="2">Cuadrada</option>
-                            <option value="3">Redonda</option>
-                            <option value="4">Rectangular</option>
-                            <option value="5">Cubo</option>
+
+                            <?php 
+                                include("../php/con_db.php");
+                                $getClientes1 = "select * from macetas order by id_maceta ";
+                                $getClientes2 = mysqli_query($conexion, $getClientes1);
+                                while ($row =mysqli_fetch_array($getClientes2))
+                                {
+                                    $id_maceta = $row['id_maceta'];
+                                    $maceta = $row['maceta'];
+                                    $precio = $row['precio'];
+
+                                    ?>
+                                    <option value="<?php echo $id_maceta; ?>"> <?php echo $maceta." $".$precio; ?></option>
+                                    <?php
+                                }
+                            ?>
                         </select>
-                        
-                        <div>
-                            <label for="precio">PRECIO</label>
-                            <input type="text" id="precio" disabled style="width: 50px;">
-                        </div>
+                        <textarea name="observacion" id="mensajeform" cols="21" rows="2" placeholder="Observacion" ></textarea>
+
                         <br>
                         <div class="contenedor-submit">
                             
@@ -148,6 +256,8 @@
 
                     
                 </div>
+
+                
         
 
 

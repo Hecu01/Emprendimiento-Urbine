@@ -30,16 +30,18 @@ footer{
 
 .formulario{
     background: rgba(0, 255, 149, 0.801);
-    width: 280px;
+    width: 350px;
     padding: 20px;
     height: fit-content;
-    margin: 15px;
+    margin: 30px;
     display: flex;
     justify-content: center;
     border-radius: 10%;
     box-shadow: 20px 20px 5px rgba(0, 255, 149, 0.356);
     color: #fff;
     text-shadow: 1px 1px 1px #000;
+
+
 }
 
 .formulario form{
@@ -50,3 +52,4 @@ footer{
 .formulario form input, .formulario form select{
     margin: 5px 0px;
 }
+
