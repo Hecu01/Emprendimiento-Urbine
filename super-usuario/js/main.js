@@ -26,3 +26,24 @@ function validar_encargue (){
 
     }
 }
+
+
+// Registrar venta
+function validar_venta (){
+
+    let cliente, select_maceta;
+
+    cliente = document.getElementById('cliente_venta').value ;
+    select_maceta =  document.getElementById('maceta_venta').value ;
+    
+    if (isNaN(cliente)){
+        alert("Elija un cliente");
+        return false;
+    }else{
+        if(isNaN(select_maceta)){
+            alert("Elija una maceta");
+            return false;
+        }
+
+    }
+}

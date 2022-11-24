@@ -256,7 +256,7 @@
         
                                 <h2>Venta</h2>
         
-                                <select name="cliente" id="cliente" style="width:180px;">
+                                <select name="cliente" id="cliente_venta" style="width:180px;">
         
                                     <option value="default" selected disabled hidden required>Seleccione Cliente</option>
         
@@ -277,14 +277,12 @@
                                         }
                                     ?>
                            
-            
-        
                                     
                                 </select>
         
-                                <select name="maceta" id="maceta" style="width:180px;">
+                                <select name="maceta" id="maceta_venta" style="width:180px;">
                                     
-                                    <option value="default" selected disabled hidden>Seleccione Maceta</option>
+                                    <option value="default" selected disabled hidden id="seleccione_maceta">Seleccione Maceta</option>
         
                                     <?php 
                                         include("../php/con_db.php");
