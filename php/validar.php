@@ -33,9 +33,9 @@
 
         ?> 
         <script>alert("No pudiste autenticarte");</script>
-
+        
         <?php 
-
+        header("location: ../login_sudo.php");
     }
 
     # 

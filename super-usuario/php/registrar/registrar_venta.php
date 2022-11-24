@@ -1,6 +1,6 @@
 <?php 
     # Conexion
-    include("../php/con_db.php");
+    include("con_db.php");
     
     # Al apretar el boton registrar cliente...
     if (isset ($_POST['register-venta'])){

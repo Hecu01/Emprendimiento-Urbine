@@ -1,6 +1,6 @@
 <?php 
     # Conexion
-    include("../php/con_db.php");
+    include("con_db.php");
     
     # Al apretar el boton registrar cliente...
     if (isset ($_POST['register-cliente'])){
@@ -15,6 +15,7 @@
             $direccion = trim($_POST['direccion']);
             $zona = trim ($_POST['zona']);
 
+            # Busca los repetidos en la tabla
             function buscarRepetidos($name, $surname, $direccion, $zona, $conexion){
                 $sql = "SELECT * FROM clientes WHERE nombre='$name' AND apellido='$surname' AND direccion='$direccion' AND zona='$zona'";
             
@@ -27,6 +28,10 @@
  
             }
 
+
+
+
+            # Si estan repetidos... entonces            
             if (buscarRepetidos($name, $surname, $direccion, $zona, $conexion) == 1){
                 ?>
                 <br>
@@ -74,7 +79,6 @@
             
             # Buscar repetidos en la tabla [clientes]
  
-
 
             # Autentificación
 

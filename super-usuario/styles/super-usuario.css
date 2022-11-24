@@ -3,7 +3,10 @@
 }
 .aside{
     overflow-y: scroll;
+    
     height: 100%;
+    height: 300px;
+
     display: flex;
     align-items: center;
     height: auto;
@@ -40,8 +43,6 @@ footer{
     box-shadow: 20px 20px 5px rgba(0, 255, 149, 0.356);
     color: #fff;
     text-shadow: 1px 1px 1px #000;
-
-
 }
 
 .formulario form{
@@ -53,3 +54,41 @@ footer{
     margin: 5px 0px;
 }
 
+.bottom{
+    padding: 40px 0px;
+}
+.mi_table{
+    background: #fff; 
+    text-shadow:1px 1px 1px #fff; 
+    width:500px; 
+    margin: 0px auto;
+    box-shadow: 0px 0px 5px rgb(0, 255, 21);
+}
+
+
+
+.aside{
+    overflow-y: scroll;
+    
+
+    height: 400px;
+    
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 270px;
+    background: url('../../images/menu_background _invertido.jpg') no-repeat center/cover;
+
+
+}
+
+
+/* Tabla encargues */
+.bottom{
+    background:#fff; 
+    width:600px;
+}
+
+#no-eligio-maceta{
+    display: none;
+}
