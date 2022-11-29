@@ -1,0 +1,46 @@
+footer{
+    height: 300px;
+    background-color: rgba(6, 181, 187, 0.507);
+    box-shadow: 0px 0px 10px rgba(6, 181, 187, 0.507);
+    border-top: 1px solid #fff;
+}
+
+.footer-content-img{
+    margin: 15px 0px;
+    margin-left: 20px;
+
+}
+
+[alt="Logo de mi pagina"]{
+    width: 150px;
+    
+    border-radius: 100%;
+    border: 3px solid #fff;
+}
+
+
+.footer{
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    padding: 35px 0px;
+}
+
+.description-app{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 500px;
+    margin: 0px 45px;
+    font-size: 1.3em;
+}
+
+.usuario{
+    box-shadow: 0px 0px 3px #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+    padding-right: 20px;
+}
+.datos ul li{
+    margin: 5px 0px;
+}

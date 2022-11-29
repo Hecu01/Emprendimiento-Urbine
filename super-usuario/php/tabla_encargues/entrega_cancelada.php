@@ -10,7 +10,12 @@
         $sql = "UPDATE encargues SET rechazado = '1' WHERE id_encargue = '$id'";
         $query = mysqli_query($conexion, $sql);
         if($query){
-            header('Location: ../../index.php');
+            ?>
+            <script>
+                alert('Entrega cancelada');
+            </script>
+            <?php
+            header('Location: ../../encargues.php');
         }
     }
 

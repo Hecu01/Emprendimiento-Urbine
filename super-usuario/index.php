@@ -18,8 +18,11 @@
         <link rel="stylesheet" href="../styles/menu.css">
         <link rel="stylesheet" href="../styles/header.css">
         <link rel="stylesheet" href="../styles/styles.css">
+        
+        <link rel="stylesheet" href="../styles/footer.css">
         <link rel="stylesheet" href="styles/super-usuario.css">
         <link rel="stylesheet" href="styles/encargar.css">
+        <link rel="stylesheet" href="styles/clientes-php.css">
         
 
 
@@ -44,25 +47,6 @@
 
                 <a href="index.html"> <img src="../images/emprendimiento.jpg" alt="logo" width="110px" height="50px"></a>
                 
-                
-                <?php 
-                    /* AL INICIAR SESION QUE DIGA AL LADO DE SUPER-USUARIO: <span> $ADMIN </span>
-                    include("../php/con_db.php");
-                    $getAdmin1 = "select * from administradores order by apellido ";
-                    $getAdmin2 = mysqli_query($conexion, $getAdmin1);
-                    while ($row =mysqli_fetch_array($getAdmin2))
-                    {
-                        $id_cliente = $row['id_cliente'];
-                        $nombre = $row['nombre'];
-                        $apellido = $row['apellido'];
-                        $direccion = $row['direccion'];
-                        $zona = $row['zona'];
-                        ?>
-                        <option value="<?php echo $id_cliente; ?>"> <?php echo $apellido." ".$nombre; ?></option>
-                        <?php
-                    }
-                    */
-                ?>
                    
                 <h1 style="margin-right: 15px;">Super-Usuario: <span>Valentin</span></h1> 
                 
@@ -73,18 +57,39 @@
             <!-- super-usuario -->
             <div class="header super-usuario">
 
-                <aside class="aside sticky-top" id="aside">
- 
-                    <ul class="ul-unico">
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Pedidos</a></li>
-                        <li><a href="">Stock</a></li>
-                        <li><a href="">Agregar macetas</a></li>
-                        <li><a href="">Agregar impresion 3d</a></li>
-                        <li><a href="">Consultas</a></li>
-                       
-                    </ul>
-                </aside>
+
+                <div class="fondo-aside">
+                    <header class="aside">
+                        
+                        
+                        <aside style="height: 300px;">
+                            <h3>Emprendimiento Urbine</h3>
+
+                                <ul >
+                                    <li>
+                                        <a href="clientes.php">Clientes</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="encargues.php">Encargues</a>
+                                    </li>
+                        
+                                    <li>
+                                        <a href="tabla2.php">Ventas</a>
+                                    </li>
+                                    <li>
+                                        <a href= "logout.php">Salir</a>
+                                    </li>
+                                </ul>
+
+                        </aside>
+                        
+                        
+                    
+                        
+                    </header>
+                </div>
+
 
                     
 
@@ -123,7 +128,8 @@
         
                         </div>
                         
-                        <!-- Registrar encargue -->
+                        <!-- Registrar encargue 
+
                         <div class="formulario" id="agregar-encargue">
                             <form method="POST" onsubmit="return validar_encargue();">
         
@@ -134,6 +140,7 @@
                                     <option value="default" selected disabled hidden >Seleccione Cliente</option>
         
                                     <?php 
+                                    /*
                                         include("../php/con_db.php");
                                         $getClientes1 = "select * from clientes order by apellido ";
                                         $getClientes2 = mysqli_query($conexion, $getClientes1);
@@ -148,9 +155,10 @@
                                             <option value="<?php echo $id_cliente; ?>"> <?php echo $apellido." ".$nombre; ?></option>
                                             <?php
                                         }
+                                    */
                                     ?>
                                 </select>
-        
+                            
                                 <div class="d-flex">
                                     <select name="maceta" id="maceta" style="width:180px;">
                                         <option value="default" selected disabled hidden>Conica</option>
@@ -248,9 +256,10 @@
         
                             
                         </div>
+                        -->
 
 
-                        <!-- Registrar Venta -->
+                        <!-- Registrar Venta 
                         <div class="formulario" id="registrar-venta">
                             <form method="POST" onsubmit="return validar_venta();">
         
@@ -326,6 +335,7 @@
         
                             
                         </div>
+                    -->
                         
                     </div>
                     
@@ -341,6 +351,7 @@
                     -->
                     <!-- Tabla encarges-->
                     <div class="bottom" style="margin:35px auto;">
+                        <h3>Clientes</h3>
                         
                         <table class="table table-responsive" salign="center" >
                             <thead>
@@ -409,8 +420,29 @@
             
 
 
-            <footer>
-                <h1>Final de pagina</h1>
+            <footer class="footer">
+                <div class="usuario">
+                    <div class="footer-content-img">
+                        <img src="../images/emprendimiento.jpg" alt="Logo de mi pagina">
+                    </div>
+                    <div class="datos">
+                        <ul>
+                            <li><strong>Nombres</strong>: Valentin</li>
+                            <li><strong>Apellido</strong>: Valentin</li>
+                            <li><strong>Nick</strong>: Urbine01</li>
+                            <li><strong>Rol</strong>: Super Usuario <!-- o Usuario--></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="description-app" >
+                    <p>
+                        <strong>
+                            Emprendimiento urbine <br>
+                            Ésta app es personal, orientada a la venta de macetas,  
+                        </strong>
+                    </p>
+                </div>
             </footer>
 
         </div>

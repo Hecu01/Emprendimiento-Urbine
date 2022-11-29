@@ -1,0 +1,27 @@
+/* Tabla encargues */
+#table-encargues{
+    overflow-y: scroll;
+    width: 550px;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+
+
+.top{
+    display: flex;
+    justify-content: center;
+}
+#agregar-encargue{
+    display: flex;
+    justify-content: center;
+}
+
+.inputs-macetas{
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    color: #000;
+    font-size: 0.9em;
+    height: 26px;
+    
+}

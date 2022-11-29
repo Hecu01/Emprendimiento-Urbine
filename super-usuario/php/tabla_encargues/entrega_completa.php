@@ -12,9 +12,10 @@
         if($query){
             ?> 
             <script>
-                alert('Entregado');
+                alert('Entrega completa');
             </script>
-            <?php
+            <?php    
+            header('Location: ../../encargues.php');
         }
     }
 
