@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Urbine01, Valentín Urbine, Valen Urbine, valen urbine, valen, urbine, Urbine, Valen, Valentín, valentín, valentin Hecu01, sitio de Valentin">
         <meta name="author" content="Valentín Urbine">
-        <meta name="description" content="Éste es mi primer sitio web. Soy Valentín Urbine.">
+        <meta name="description" content="Éste es mi sitio web. Soy Valentín Urbine.">
         <link rel="icon" href="../images/favicon.ico"> 
 
         <!-- Bootstrap 5 -->
@@ -146,10 +146,11 @@
                                         }
                                     ?>
                                 </select>
+                                
                                 <textarea name="observacion" id="mensajeform" cols="21" rows="2" placeholder="Observacion" ></textarea>
                                 <div class="cantidad">
                                     <label for="cantidad" style="font-weight: 800;">CANTIDAD</label>
-                                    <select name="cantidad_ventas" id="cantidad">
+                                    <select name="cantidad_macetas" id="cantidad">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -190,51 +191,27 @@
                     <div class="bottom" style="margin:35px auto;">
                         
                         <table class="table table-responsive" salign="center" >
-                            <thead>
-                                <th>Fecha</th>
-                                <th>Clientes</th>
-                                <th>Encargadas</th>
-                                <th>Entregado</th>
-                                <th>Incompleto</th>
-                                <th>Rechazado</th>
+                            <thead>  
+                                <th>id_venta</th>
+                                <th>fecha</th>
+                                <th>cliente</th>
+                                <th>maceta</th>
+                                <th>cantidad</th>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = "SELECT * FROM vistas_encargue WHERE entregado = 0 AND medio_entregado = 0 and rechazado = 0";
+                                $sql = "SELECT * FROM vistas_ventas ORDER BY id_venta";
                                 $resultado = mysqli_query($conexion, $sql);
                                 while($row = mysqli_fetch_assoc($resultado)) { 
                                 ?>
                                 <tr>
                 
-                                    <td><?php echo $row['fecha_encargue']; ?> </td>
-                                    <td><?php echo $row['cliente']; ?></td>
-                                    <td><?php echo $row['macetas_encargadas']; ?></td>
-                                    
-                                    <td>
-                                        <a href="php/tabla_encargues/entrega_completa.php?id_encargue=<?php echo $row['id_encargue'];?>">
-                                            <button class="btn btn-success" type="submit" name="entregar_pedido"><i class="fa-solid fa-check"></i></button>
-                                        </a>
-                                        <?php include('php/tabla_encargues/entrega_completa.php');?>
-                                    </td>
-                                        
-                                    <td>
-                                        <a href="php/tabla_encargues/entrega_incompleta.php?id_encargue=<?php echo $row['id_encargue'];?>">
-                                            <button class="btn btn-warning" type="submit" name ="btn-entregado" ><i class="fa-solid fa-bell" style="color:#fff;"></i></button>
-                                            
-                                        </a>
-                                        
-                                        <?php include('php/tabla_encargues/entrega_incompleta.php');?>
-
-                                    </td>
-                                        
-                                    <td> 
-                                        <a href="php/tabla_encargues/entrega_cancelada.php?id_encargue=<?php echo $row['id_encargue'];?>">
-                                            <button class="btn btn-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
-                                        </a>
-                                        
-                                        <?php include('php/tabla_encargues/entrega_cancelada.php');?>
-                                    </td>
-                                </tr>
+                                    <td><?php echo $row['id_venta']; ?> </td>
+                                    <td><?php echo $row['fecha']; ?></td>
+                                    <td><?php echo $row['cliente']; ?> </td>
+                                    <td><?php echo $row['maceta']; ?></td>
+                                    <td><?php echo $row['cantidad']; ?></td>
+              
                                 <?php } 
                                 
                                 ?>

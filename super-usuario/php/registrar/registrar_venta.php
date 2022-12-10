@@ -12,15 +12,14 @@
             # Los datos, sacandole los espacios (TRIM) al principio y al final
             $cliente = trim($_POST['cliente']);
             $maceta = trim($_POST['maceta']);
+            $cantidad = trim($_POST['cantidad_macetas']);
             $observacion = trim($_POST['observacion']);
             
             
-            $consulta = "INSERT INTO ventas(id_cliente, id_maceta, observacion) VALUES ('$cliente', '$maceta','$observacion')";
+            $consulta = "INSERT INTO ventas(id_cliente, id_maceta, cantidad, observacion) VALUES ('$cliente', '$maceta', '$cantidad','$observacion')";
             $resultado = mysqli_query($conexion, $consulta);
 
             # Insertar datos
-
-
             if ($resultado){
                 ?> 
                 <br>
