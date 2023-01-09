@@ -39,22 +39,24 @@
 
     <body>
 
-
-        <div class="contenedor">
+        
+        <!-- inicio_sesion = TRUE -- mostrar esto-->
+        <!--
+            <div class="contenedor">
             
-            <!-- Menu -->
+             
             <div class="menu">
 
                 <a href="index.html"> <img src="../images/emprendimiento.jpg" alt="logo" width="110px" height="50px"></a>
                 
                    
-                <h1 style="margin-right: 15px;">Super-Usuario: <span>$usuario</span></h1> 
+                <h1 style="margin-right: 15px;">Super-Usuario: <span>usuario</span></h1> 
                 
                 
                 
             </div>
 
-            <!-- super-usuario -->
+          
             <div class="header super-usuario">
 
 
@@ -105,12 +107,7 @@
 
 
             </div>
-
  
-
-            
-
-
             <footer class="footer">
                 <div class="usuario">
                     <div class="footer-content-img">
@@ -121,7 +118,7 @@
                             <li><strong>Nombres</strong>: Valentin</li>
                             <li><strong>Apellido</strong>: Valentin</li>
                             <li><strong>Nick</strong>: Urbine01</li>
-                            <li><strong>Rol</strong>: Super Usuario <!-- o Usuario--></li>
+                            <li><strong>Rol</strong>: Super Usuario o Usuario</li>
                             
                         </ul>
                     </div>
@@ -135,7 +132,33 @@
                     </p>
                 </div>
             </footer>
+        -->
 
+
+        <!-- inicio_sesion = FALSE mostrar esto -->
+        <div class="contenedor">
+
+            <div class="menu">
+    
+                <a href="index.html"> <img src="../images/emprendimiento.jpg" alt="logo" width="110px" height="50px"></a>
+    
+                
+                <h1 style="margin-right: 15px;">Emprendimiento Urbine</h1> 
+    
+    
+    
+            </div>
+
+            <div class="container" >
+                <br><br><br>
+                <h1>Hola!</h1>
+                <p>No iniciaste sesión</p>
+                <blockquote>
+                    <a href="../login_sudo.php">Inicia sesión</a> o también podes <a href="../register_sudo.php">Registrarte</a>
+                </blockquote>
+                <br><br><br>
+            </div>
+    
         </div>
 
         <script  src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

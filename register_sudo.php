@@ -1,3 +1,30 @@
+<?php 
+
+    require 'php/con_db.php';
+
+    $message = '';
+
+    if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['nombre']) && !empty($_POST['apellido'])){
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        $sql = "INSERT INTO usuarios (nombre, apellido, correo, contraseña) VALUES ('$nombre', '$apellido', '$email', '$password')";
+        $resultado = mysqli_query($conexion, $sql);
+        if($resultado){
+            echo'Usuario creado';
+            
+        }else{
+            echo'Error';
+        }
+        
+        // Dandole valores a las variables
+    
+
+        // Hash: cifrar los datos... lo cifro y luego lo almaceno y luego hago la consulta
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -31,7 +58,7 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-        <title>Login</title>
+        <title>Registro</title>
     </head>
 
     <body>
@@ -44,7 +71,7 @@
 
                 <a href="index.html"> <img src="images/logo.jpg" alt="logo" width="90px" height="60px"></a>
                 
-                <h1 style="margin-right: 15px;">Login / Sign in</h1> 
+                <h1 style="margin-right: 15px;">Registro de la aplicación</h1> 
                 
                 <!-- Responsive Menu -->
                 
@@ -55,7 +82,7 @@
 
                 
                 <div class="contenedor">
-                    <h1 id="h1-emprendimiento">Emprendimiento Urbine <br> <span style="font-size: 2.7rem;">(Super Usuario)</span></h1> 
+                    <h1 id="h1-emprendimiento">Emprendimiento Urbine</h1> 
 
                     <div class="divisor-tita">
                             
@@ -63,28 +90,27 @@
         
                     
                             <div class="form">
-                                <form method="POST">
+                                <form method="POST" onsubmit="validar_registro()">
         
-                                    <h2>Login</h2>
-                                    <label for="nombre-persona">Correo electrónico</label><br>
-                                    <input type="email" name="correo" id="nombre-persona"> <br>
-                            
-                                    <label for="apellido-persona">Contraseña</label><br>
-                                    <input type="password" name="password" id="apellido-persona">
-                            
-                            
+                                    <?php if(!empty($message)):?>
+                                    <p><?php echo $message; ?></p>
+                                    <?php endif;?>
 
+                                    <h2>Registro</h2>
+                                    <input type="text" name="nombre" placeholder="Nombre"> 
+                                    <input type="text" name="apellido" placeholder="Apellido">
+                                    <input type="email" name="email" placeholder="Email">
+                                    <input type="password" name="password" placeholder="Contraseña">
+                                    <input type="password" name="password_confirm" placeholder="Confirmar contraseña">
                                     <br>    
                                     <div class="contenedor-submit">
-                                        
                                         <input type="submit" value="ENVIAR" name="register" id="enviar" class="btn btn-primary">
-        
+
                                     </div>
 
                                     
-
                                 </form>                                    
-                                <p class="p-no-registrado">¿No está registrado? registrese <a id="a-aqui" href="registro_super_usuario.html">aquí</a></p>
+                                <p class="p-no-registrado">¿Ya tiene cuenta? Inicie sesión <a id="a-aqui" href="login_sudo.php">aquí</a></p>
         
                                 
                             </div>

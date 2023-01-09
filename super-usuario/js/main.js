@@ -1,4 +1,4 @@
-// Registrar cliente
+// Registrar encargue
 function validar_encargue (){
 
     let cliente, conicas, cuadradas_grandes, rectangulares, redondas, cuadradas_chicas, mensaje_error;

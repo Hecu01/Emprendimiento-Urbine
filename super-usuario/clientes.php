@@ -38,57 +38,16 @@
 
     <body>
 
-
         <div class="contenedor">
             
             <!-- Menu -->
-            <div class="menu">
-
-                <a href="index.html"> <img src="../images/emprendimiento.jpg" alt="logo" width="110px" height="50px"></a>
-                
-                   
-                <h1 style="margin-right: 15px;">Super-Usuario: <span>Valentin</span></h1> 
-                
-                
-                
-            </div>
+            <?php require 'partials/header.php';?>
 
             <!-- super-usuario -->
             <div class="header super-usuario">
 
-
-                <div class="fondo-aside">
-                    <header class="aside">
-                        
-                        
-                        <aside style="height: 300px;">
-                            <h3>Emprendimiento Urbine</h3>
-
-                                <ul >
-                                    <li>
-                                        <a href="#" onclick="alert('Se encuentra aqui')">Clientes
-                                    </li>
-                                    
-                                    <li>
-                                        <a href="encargues.php">Encargues</a>
-                                    </li>
-                        
-                                    <li>
-                                        <a href="ventas.php">Ventas</a>
-                                    </li>
-                                    <li>
-                                        <a href= "logout.php">Salir</a>
-                                    </li>
-                                </ul>
-
-                        </aside>
-                        
-                        
-                    
-                        
-                    </header>
-                </div>
-
+                <!-- Aside -->
+                <?php require 'partials/aside.php'?>
 
                     
 
@@ -97,95 +56,13 @@
                     <div class="top d-flex justify-content-center ">
 
                         <!-- Registrar Cliente -->
-                        <div class="formulario needs-validation" id="agregar-cliente" >
-                            <form method="POST" >
-        
-                                <h2>Registrar Cliente</h2>
-                                <div>
-                                    <input type="text" name="name"  id="nombre-cliente"  required placeholder="Nombre" id="nombre-persona"> 
-                                </div>
-                                <div>
-                                    <input type="text" name="surname"  required  placeholder="Apellido" id="apellido-persona"> 
-                                </div>
-                                <div>
-                                    <input type="text" name="direccion" id="direccion" placeholder="Direccion">  
-                                </div>
-                                <div>
-                                    <input type="text" name="zona" id="zona" placeholder="Zona"> 
-                                </div>             
-                                <br>    
-                                <div class="contenedor-submit">
-                                    <input type="submit" value="Registrar" name="register-cliente" id="enviar-cliente" class="btn btn-primary">
-        
-                                </div>
-                                <?php
-                                    include('php/registrar/registrar_cliente.php');
-                                ?>
-                                <script src="js/main.js"> </script>
-                            </form>
-              
-                        </div>
+                        <?php  require 'partials/clientes/registrar_cliente.php';?>
+                        
                            
 
 
                         <!-- Tabla clientes-->
-                        <div class="right">
-                            
-                            <div class="col-12 busqueda_clientes" >
-                                <h4 >
-                                    Clientes
-                                </h4>
-
-                                <form action="" method="POST" >
-                                    <input type="search" name="campo" id="campo" placeholder="Buscar Cliente">
-                                    <input type="submit" value="Buscar" class="btn btn-warning" >
-                                </form>
-                            </div>
-
-                            <div class="bottom" id="tabla-clientes">
-                                <table class="table table-responsive" >
-                                    <thead>
-                                        <th>Id  </th>
-                                        <th>Nombre </th>
-                                        <th>Apellido</th>
-                                        <th>Direccion</th>
-                                        <!-- <br><button style="width: 23px; padding: 0;" class="btn btn-primary"><i class="fa-solid fa-arrow-down-a-z"></i></button>-->
-                                        <th>Zona </th>
-                                        <th>Editar</th>
-                                   </thead>
-                                    <tbody id="content">
-                                        <!--
-                                        <?php
-                                         /*
-                                            $sql = "SELECT * FROM clientes";
-                                            $resultado = mysqli_query($conexion, $sql);
-                                            while($row = mysqli_fetch_assoc($resultado)) { 
-                                        ?>
-
-
-                                        <tr>
-                                            <td><?php echo $row['id_cliente']; ?> </td>
-                                            <td><?php echo $row['nombre']; ?></td>
-                                            <td><?php echo $row['apellido']; ?></td>
-                                            <td><?php echo $row['direccion']; ?></td>
-                                            <td><?php echo $row['zona']; ?></td>
-                                            <td>
-                                                <a href="php/tabla_encargues/entrega_completa.php?id_encargue=<?php echo $row['id_cliente'];?>">
-                                                    <button class="btn btn-success" type="submit" name="entregar_pedido"><i class="fa-solid fa-pen-to-square"></i></button>
-                                                </a>
-                                            </td>                                
-                                        </tr>
-                                        <?php } 
-                                        */
-                                        ?>
-                                    -->
-                                    </tbody>
-
-                                </table>
-
-
-                            </div>
-                        </div>
+                        <?php  require 'partials/clientes/tabla_clientes.php';?>
                         
                     </div>
                     
